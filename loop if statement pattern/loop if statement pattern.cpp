@@ -3,33 +3,26 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
+
+int main()
 {
-
-
-	//first triangle
-	for (int r = 0; r < 10; r++)
-	{
-		for (int c = 0; c < r; c++)
-		{
-			cout << "*";
+	string x = "";
+	int counter = 0;
+	
+	do{
+		counter++;
+		if(counter>10){ // if there are already 10x * in x
+			x.pop_back(); // this erases the last character in the string
+			cout << x << "\n"; // write x with an enter in the end
+		}else{ // if there arent 10x * in x
+			x+="*"; //x = x + "*"
+			cout << x << "\n";
 		}
-		cout << endl;
-	}
-
-	//second triangle
-	for (int r = 10; r > 0; r--)
-	{
-		for (int c = 0; c < r; c++)
-		{
-			cout << "*";
-		}
-		cout << endl;
-	}
-	system("PAUSE");
-
-	return 0;
+	}while(counter<20);
+}
 }
 
