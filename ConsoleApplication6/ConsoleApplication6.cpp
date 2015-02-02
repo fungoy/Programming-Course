@@ -26,6 +26,16 @@ static void asciitable()
 
 }
 
+class overload{
+public:
+	void print(int integer){
+		cout << "testing integer: " << integer;
+}
+	void print(double doubl){
+		cout << "testing double: " << doubl;
+	}
+}
+
 
 static void temperature ()
 {
